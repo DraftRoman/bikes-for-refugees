@@ -23,6 +23,24 @@ button {
   color: var(--grey-dark);
   font-size: 1rem;
 }
+.donate_button,
+.volunteer {
+  border: none;
+  padding: 0.4rem 0.7rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 1rem;
+  border-radius: 4px;
+}
+.donate_button {
+  background-color: var(--orange-dark);
+  color: var(--white);
+}
+.volunteer {
+  background-color:var(--white);
+  color: var(--orange-dark);
+}
 
 h1,h2,h3,h4,h5,h6 {
   margin-top: 0;
@@ -63,6 +81,8 @@ p {
 .navigation__list {
   display: flex;
   list-style: none;
+  gap: 2rem;
+  font-size: large;
 }
 
 .navigation__item {
@@ -71,7 +91,7 @@ p {
 
 .navigation__link {
   color: var(--grey-dark);
-  font-weight: 600;
+  font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -125,7 +145,6 @@ p {
   background-position: center;
   background-color: var(--grey-light);
   height: 250px;
-  padding: 2rem;
 }
 
 .hero h1 {
@@ -175,6 +194,8 @@ p {
 }
 figure {
   margin: 0;
+  padding: 1rem;
+  border: 1px solid var(--grey-light);
 
   display: flex;
   align-items: center;
@@ -225,6 +246,7 @@ figure {
 
 .facebook-link {
   color: var(--orange-dark);
+  text-align: right;
 }
 
 /* Sidebar */
