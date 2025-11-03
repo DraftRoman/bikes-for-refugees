@@ -30,7 +30,7 @@ button {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  margin-right: 1rem;
+  margin-right: 0.2rem;
   border-radius: 4px;
 }
 .donate_button {
@@ -45,6 +45,9 @@ button {
 h1,h2,h3,h4,h5,h6 {
   margin-top: 0;
   margin-bottom: 0;
+}
+h1,h2{
+  margin-top: 1.5rem;
 }
 
 p {
@@ -145,6 +148,7 @@ p {
   background-position: center;
   background-color: var(--grey-light);
   height: 250px;
+  padding: 1.5rem;
 }
 
 .hero h1 {
@@ -199,6 +203,16 @@ figure {
 
   display: flex;
   align-items: center;
+  gap: 1rem;
+}
+.main-content article {
+  display: block ;
+  border: 2px solid var(--grey-light);
+  padding: 1rem;
+}
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
 
@@ -284,5 +298,18 @@ figure {
 
   .main {
     padding-right: 2rem;
+  }
+}
+@media screen  and (max-width: 992px) {
+  .navigation__list { 
+    gap: 1rem;
+    font-size: medium;
+  }
+    
+  .navigation__list {
+    padding-inline-start: 5px
+  }
+  .header__logo {
+    max-height: 70spx;
   }
 }
