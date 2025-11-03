@@ -37,9 +37,17 @@ button {
   background-color: var(--orange-dark);
   color: var(--white);
 }
+.donate_button:hover {
+  background-color: var(--grey-light);
+  color: var(--orange-dark);
+}
 .volunteer {
   background-color:var(--white);
   color: var(--orange-dark);
+}
+.volunteer:hover {
+  background-color: var(--orange-dark);
+  color: var(--white);
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -98,7 +106,9 @@ p {
   text-transform: uppercase;
   text-decoration: none;
 }
-
+.navigation__list :hover {
+  color: var(--orange-dark);
+}
 
 /* Text styles */
 
@@ -304,6 +314,9 @@ figure {
   .navigation__list { 
     gap: 1rem;
     font-size: medium;
+  }
+  .article {
+    display: block;
   }
     
   .navigation__list {
