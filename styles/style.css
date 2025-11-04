@@ -327,3 +327,30 @@ figure {
     max-height: 70spx;
   }
 }
+@media(max-width: 600px) {
+  .header,
+    .content,
+    .footer {
+      padding: 0 1rem;
+    }
+  .navigation__list {
+    font-size: small;
+  }
+  .header__logo {
+    max-height: 45px;
+  }
+  .hero {
+    height: 200px;
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
