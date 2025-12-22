@@ -15,6 +15,7 @@
 
 body {
   margin: 0;
+  font-display: swap;
 }
 
 body,
@@ -23,10 +24,39 @@ button {
   color: var(--grey-dark);
   font-size: 1rem;
 }
+.donate_button,
+.volunteer {
+  border: none;
+  padding: 0.4rem 0.7rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 0.2rem;
+  border-radius: 4px;
+}
+.donate_button {
+  background-color: var(--orange-dark);
+  color: var(--white);
+}
+.donate_button:hover {
+  background-color: var(--grey-light);
+  color: var(--orange-dark);
+}
+.volunteer {
+  background-color:var(--white);
+  color: var(--orange-dark);
+}
+.volunteer:hover {
+  background-color: var(--orange-dark);
+  color: var(--white);
+}
 
 h1,h2,h3,h4,h5,h6 {
   margin-top: 0;
   margin-bottom: 0;
+}
+h1,h2{
+  margin-top: 1.5rem;
 }
 
 p {
@@ -63,6 +93,8 @@ p {
 .navigation__list {
   display: flex;
   list-style: none;
+  gap: 2rem;
+  font-size: large;
 }
 
 .navigation__item {
@@ -71,11 +103,13 @@ p {
 
 .navigation__link {
   color: var(--grey-dark);
-  font-weight: 600;
+  font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
 }
-
+.navigation__list :hover {
+  color: var(--orange-dark);
+}
 
 /* Text styles */
 
@@ -120,18 +154,24 @@ p {
 /* hero */
 
 .hero {
-  background-image: url("header-bike.jpg");
+  background-image: url("/images/header-bike.jpg");
+  background-size: cover;
+  background-position: center;
   background-color: var(--grey-light);
+  height: 250px;
+  padding: 1.5rem;
 }
 
 .hero h1 {
   margin-bottom: 1rem;
   font-size: 2.5rem;
+  color: var(--white);
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  color: var(--white);
 }
 
 
@@ -163,6 +203,28 @@ p {
 
 .article {
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+figure {
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid var(--grey-light);
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.main-content article {
+  display: block ;
+  border: 2px solid var(--grey-light);
+  padding: 1rem;
+}
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
 }
 
 .article__title {
@@ -209,6 +271,7 @@ p {
 
 .facebook-link {
   color: var(--orange-dark);
+  text-align: right;
 }
 
 /* Sidebar */
@@ -246,5 +309,48 @@ p {
 
   .main {
     padding-right: 2rem;
+  }
+}
+@media screen  and (max-width: 992px) {
+  .navigation__list { 
+    gap: 1rem;
+    font-size: medium;
+  }
+  .article {
+    display: block;
+  }
+    
+  .navigation__list {
+    padding-inline-start: 5px
+  }
+  .header__logo {
+    max-height: 70spx;
+  }
+}
+@media(max-width: 700px) {
+  .header,
+    .content,
+    .footer {
+      padding: 0 1rem;
+    }
+  .navigation__list {
+    font-size: small;
+  }
+  .header__logo {
+    max-height: 45px;
+  }
+  .hero {
+    height: 200px;
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
 }
